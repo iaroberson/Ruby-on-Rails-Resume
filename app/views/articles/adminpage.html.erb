@@ -1,4 +1,10 @@
 <!DOCTYPE html>
 <%= stylesheet_link_tag 'admin' %>
-<h1>Articles#admin</h1>
-<p>Find me in app/views/articles/admin.html.erb</p>
+
+
+<% if admin_signed_in? %>
+    <h1>Articles#admin</h1>
+    <p>Find me in app/views/articles/admin.html.erb</p>
+<% else %>
+    <p>You are not authorized to access this page.</p>
+<% end %>

@@ -2,12 +2,14 @@
 <%= stylesheet_link_tag 'layout' %>
 <html>
 
-  <nav>
-    <a href="<%=articles_index_path%>">INDEX</a>
-    <a href="<%=articles_education_path%>">EDUCATION</a>
-    <a href="<%=articles_work_path%>">WORK EXPERIENCE</a>
-    <a href="<%=articles_adminpage_path%>">ADMIN</a>
-  </nav>
+<nav>
+  <a href="<%= articles_index_path %>">INDEX</a>
+  <a href="<%= articles_education_path %>">EDUCATION</a>
+  <a href="<%= articles_work_path %>">WORK EXPERIENCE</a>
+  <% if admin_signed_in? %>
+    <a href="<%= articles_adminpage_path %>">ADMIN</a>
+  <% end %>
+</nav>
 
   <head>
     <title>RubyOnRailsResume</title>
