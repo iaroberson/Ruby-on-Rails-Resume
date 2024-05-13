@@ -73,4 +73,7 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+  # Whitelist the IP address range used by GitHub Codespaces
+  config.web_console.whitelisted_ips = ['10.240.0.0/16']
 end

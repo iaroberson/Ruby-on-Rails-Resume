@@ -23,5 +23,16 @@ module RubyOnRailsResume
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Disable origin check for authenticity token in development and test environments
+    if Rails.env.development? || Rails.env.test?
+      config.action_controller.forgery_protection_origin_check = false
+    end
+    
+    # Specify default URL options for Action Controller
+    config.action_controller.default_url_options = { host: 'verbose-palm-tree-v6p6vrgr6gqhw6v4-3000.app.github.dev', protocol: 'https' }
+
+    # Specify default URL options for Action Mailer (if needed)
+    config.action_mailer.default_url_options = { host: 'verbose-palm-tree-v6p6vrgr6gqhw6v4-3000.app.github.dev', protocol: 'https' }
   end
 end
