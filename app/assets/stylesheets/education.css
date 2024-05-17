@@ -1,3 +1,49 @@
+/* Default styles */
 h1 {
     color: blue;
+}
+
+.edu-list {
+    list-style: none;
+}
+
+.edu-item {
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 3px solid var(--text-secondary);
+    padding: 1rem; /* Adjust padding for smaller screens */
+}
+
+.edu-item img {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 1rem; /* Reduce margin for smaller screens */
+}
+
+.edu-item p {
+    flex: 1; /* Allow text to fill remaining space */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .edu-item {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align text */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .edu-item img {
+        width: 6rem; /* Reduce image width for smaller screens */
+        height: 6rem; /* Reduce image height for smaller screens */
+        margin: 1rem; /* Add margin below image for spacing */
+    }
+}
+
+/* Adjust .content padding for smaller screens */
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 2rem; /* Adjust padding for smaller screens */
+    }
 }

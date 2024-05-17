@@ -4,10 +4,12 @@
 
 <main>
 
-    <h1>Articles#index</h1>
+    <h1>About Me</h1>
 
-    <p>Find me in app/views/articles/index.html.erb</p>
 
+
+
+    
     <!--
     <h1>User Links</h1>
     <% if user_signed_in? %>
@@ -17,15 +19,4 @@
         <%= link_to "Sign in", new_user_session_path %>
     <% end %>
     -->
-
-    <h1>Admin Login</h1>
-    <% if admin_signed_in? %>
-        <%= link_to "Sign out", destroy_admin_session_path, method: :delete, data: { turbo_method: :delete } %>
-    <% elsif !user_signed_in? %>
-        <%= link_to "Sign in", new_admin_session_path %>
-        <%= link_to "Sign up", new_admin_registration_path %>
-    <% end %>
-
-
-
 </main>

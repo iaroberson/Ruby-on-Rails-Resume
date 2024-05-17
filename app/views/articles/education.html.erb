@@ -2,6 +2,29 @@
 <%= stylesheet_link_tag 'education' %>
 
 <main>
-    <h1>Articles#education</h1>
-    <p>Find me in app/views/articles/education.html.erb</p>
+    <h1>Education</h1>
+    
+    <ul class="edu-list">
+        <li class="edu-item">
+            <a href="https://www.augusta.edu/" target="_blank">
+                <%= image_tag 'AU.png', alt: 'Description of the image' %>
+            </a>
+            <p><i>May 2024</i> Bachelor of Computer Science, Augusta University, Augusta Georgia</p>
+        </li>
+
+        <li class="edu-item">
+            <a href="https://www.faytechcc.edu/" target="_blank">
+                <%= image_tag 'FTCC V2.png', alt: 'Description of the image' %>
+            </a>
+            <p><i>July 2021</i> Associates in Science, Fayetteville Technical Community College, Fayetteville NC</p>
+        </li>
+
+        <li class="edu-item">
+            <a href="https://www.ccs.k12.nc.us/cfhs" target="_blank">
+                <%= image_tag 'Cape Fear HS.png', alt: 'Description of the image' %>
+            </a>
+            <p><i>June 2020</i> High School Diploma, Cape Fear High School, Fayetteville NC</p>
+        </li>
+    </ul>
+
 </main>
