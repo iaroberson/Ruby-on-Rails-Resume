@@ -36,6 +36,37 @@ main {
     flex: 1;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between; /* Align items at the start and end of the flex container */
+    align-items: center; /* Vertically center items */
+    padding-bottom: auto;
+    padding-top: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .left-header h1 {
+    margin-right: auto; /* Push to the left */
+    margin-left: 10rem;
+  }
+  
+  .right-header h1 {
+    margin-left: auto; /* Push to the right */
+    margin-right: 5rem;
+  }
+
+@media screen and (max-width: 850px) {
+  .right-header {
+    display: none; /* Hide the right header */
+  }
+  
+  .left-header h1 {
+    margin-right: auto; /* Center the left header */
+  }
+}
+
 .content {
     font-size: 16px;
     --text-primary: #ffffff;
@@ -45,17 +76,25 @@ main {
     color: var(--text-primary);
     background-color: var(--bg-primary);
 
-
+    align-items: center;
     flex: 1;
-    margin-left: 0rem;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    padding-right: 10rem;
+    padding-right: 5rem;
     padding-left: 10rem;
     background-color: var(--bg-primary);
     color: var(--text-primary);
 }
+
+@media screen and (max-width: 1000px) {
+    .content {
+        padding-right: 0rem;
+        padding-left: 2rem;
+    }
+}
+
 
 body::-webkit-scrollbar {
     width: 0.25rem;
@@ -76,6 +115,7 @@ footer {
     color: var(--text-secondary);
     text-align: center;
     padding: 1rem;
+    border-top: 1px solid #ccc;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
 /* Main styles */
 h1 {
-    color: #2e2e2e;
+    color: orange;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -8,53 +8,78 @@ h1 {
 
 /* Work Experience section */
 .work-exp-list {
+    color: var(--text-secondary);
     list-style: none;
     padding: 0;
     margin-bottom: 4rem; /* Increased margin for separation */
 }
 
 .work-item {
-    background-color: #f8f8f8;
+    background-color: var(--bg-secondary);
     border-radius: 10px;
     padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px white;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    margin-bottom: 5rem;
+}
+
+.work-info {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space items evenly */
+    margin-bottom: 1rem; /* Add space between work-info and work-description */
+}
+
+.work-position {
+    display: flex; /* Use flexbox */
+}
+
+.work-description {
+    display: flex; /* Use flexbox */
 }
 
 .work-item h5 {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 20px;
 }
 
-.work-item h6 {
-    color: #666;
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
+.work-description h6 {
+    font-size: 20px;
+}
+
+.work-position h6 {
+    font-size: 20px;
 }
 
 .work-item p {
-    color: #444;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+    padding-left: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .work-item p {
+        padding-left: 1rem;
+    }
 }
 
 /* Computer Skills section */
 .skill-list {
+    color: var(--text-secondary);
     list-style: none;
     padding: 0;
 }
 
 .skill-item {
-    background-color: #f8f8f8;
+    background-color: var(--bg-secondary);
     border-radius: 10px;
     padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px white;
+    margin-bottom: 5rem;
 }
 
 .skill-item p {
-    color: #444;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 /* Differentiation between sections */
@@ -62,7 +87,6 @@ h1 {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #2e2e2e;
     text-transform: uppercase;
     position: relative;
 }
@@ -75,5 +99,14 @@ h1 {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #333; /* Color for the line */
+    background-color: #333;
+}
+
+@media screen and (min-width: 1001px) {
+    .work-item:hover {
+        transform: scale(1.1); /* Slightly enlarge the item on hover */
+    }
+    .skill-item:hover {
+        transform: scale(1.1); /* Slightly enlarge the item on hover */
+    }
 }

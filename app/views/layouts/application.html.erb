@@ -11,6 +11,15 @@
   <%= stylesheet_link_tag 'layout' %>
 </head>
 <body>
+  <header class="header">
+    <div class="left-header">
+      <h1>Ian Roberson</h1>
+    </div>
+    <div class="right-header">
+      <h1>Ruby On Rails Resume Site</h1>
+    </div>
+  </header>
+
   <nav class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
@@ -63,10 +72,9 @@
     <%= yield %>
   </main>
   <footer class="footer">
-    <h1>Ian Roberson</h1>
-    <h3>Phone: 253-230-3954</h3>
-    <h3>Email: <address><a href="mailto:iprober2@gmail.com">iprober2@gmail.com</a></address></h3>
-    <h3>Address: 726 Old Indian Camp Road, Grovetown GA, 30813</h3>
+    <h1>Contacts</h1>
+    <h3>Phone: <a href="tel:+2532303954">253-230-3954</a></h3>
+    <h3>Email: <a href="mailto:iprober2@gmail.com">iprober2@gmail.com</a></h3>
   </footer>
 </body>
 </html>

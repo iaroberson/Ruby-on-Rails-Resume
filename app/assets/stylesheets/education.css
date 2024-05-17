@@ -1,37 +1,43 @@
 /* Default styles */
 h1 {
     color: blue;
+    text-align: center;
 }
 
 .edu-list {
     list-style: none;
+    color: var(--text-secondary);
 }
 
 .edu-item {
     background-color: var(--bg-secondary);
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
-    border: 3px solid var(--text-secondary);
-    padding: 1rem; /* Adjust padding for smaller screens */
+    margin-bottom: 5rem;
+    
+    box-shadow: 0 4px 6px white;
+    padding: 1rem;
+    transition: transform 0.3s ease; /* Add transition effect for smooth enlargement */
 }
 
 .edu-item img {
     width: 10rem;
     height: 10rem;
-    margin-right: 1rem; /* Reduce margin for smaller screens */
+    margin: 1rem;
+    border: 3px dotted var(--text-secondary);
+    background-color: black;
 }
 
 .edu-item p {
-    flex: 1; /* Allow text to fill remaining space */
+    flex: 1;
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .edu-item {
         flex-direction: column; /* Stack image and text vertically */
-        text-align: center; /* Center-align text */
         padding: 1rem; /* Adjust padding for smaller screens */
+        transition: none; /* Disable transition on smaller screens */
     }
 
     .edu-item img {
@@ -39,11 +45,12 @@ h1 {
         height: 6rem; /* Reduce image height for smaller screens */
         margin: 1rem; /* Add margin below image for spacing */
     }
+
 }
 
-/* Adjust .content padding for smaller screens */
-@media screen and (max-width: 768px) {
-    .content {
-        padding: 2rem; /* Adjust padding for smaller screens */
+/* Enlarge edu-item on hover, except on smaller screens */
+@media screen and (min-width: 1000px) {
+    .edu-item:hover {
+        transform: scale(1.1); /* Slightly enlarge the item on hover */
     }
 }
