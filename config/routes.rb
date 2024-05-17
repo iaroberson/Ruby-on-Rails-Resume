@@ -3,9 +3,6 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions',
     registrations: 'admin/registrations'
   }
-  devise_for :user, controllers: {
-    sessions: 'user/sessions'
-  }
 
   get 'articles/index'
   get 'articles/education'

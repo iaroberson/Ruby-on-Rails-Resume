@@ -1,17 +1,17 @@
 :root {
     font-size: 16px;
-    --text-primary: #ffffff; /* White text */
-    --text-secondary: #b6b6b6; /* Light grey text */
-    --bg-primary: #232323; /* Dark background */
-    --bg-secondary: #2e2e2e; /* Slightly lighter background */
+    --text-primary: #ffffff;
+    --text-secondary: #b6b6b6;
+    --bg-primary: #232323;
+    --bg-secondary: #2e2e2e;
     
-    --nav-bg: #1f6b9a; /* Darker primary navbar background color */
+    --nav-bg: #1f6b9a;
     --nav-secondary-bg: #1a2837;
 
     --icon-transition-speed: 1000ms;
-    --icon-default-color: #b6b6b6; /* Light grey icon */
-    --icon-secondary-color: #3498db; /* Blue icon for tech feel */
-    --icon-hover-color: #ffffff; /* White icon on hover */
+    --icon-default-color: #b6b6b6;
+    --icon-secondary-color: #3498db;
+    --icon-hover-color: #ffffff;
 }
 
 html, body {
@@ -38,8 +38,8 @@ main {
 
 .header {
     display: flex;
-    justify-content: space-between; /* Align items at the start and end of the flex container */
-    align-items: center; /* Vertically center items */
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: auto;
     padding-top: auto;
     margin-top: 5rem;
@@ -48,22 +48,22 @@ main {
   }
   
   .left-header h1 {
-    margin-right: auto; /* Push to the left */
+    margin-right: auto;
     margin-left: 10rem;
   }
   
   .right-header h1 {
-    margin-left: auto; /* Push to the right */
+    margin-left: auto;
     margin-right: 5rem;
   }
 
 @media screen and (max-width: 850px) {
   .right-header {
-    display: none; /* Hide the right header */
+    display: none;
   }
   
   .left-header h1 {
-    margin-right: auto; /* Center the left header */
+    margin-right: auto;
   }
 }
 
@@ -142,7 +142,7 @@ footer {
     transition: width 200ms ease;
     position: fixed;
     flex-direction: column;
-    height: 100vh; /* Fill the entire height of the viewport */
+    height: 100vh;
   }
 
 .navbar-nav {
@@ -170,8 +170,6 @@ footer {
     height: 5rem;
     color: var(--text-primary);
     text-decoration: none;
-    /* filter: grayscale(100%) opacity(0.7); */
-
 }
 
 .link-text {
